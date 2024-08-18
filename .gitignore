@@ -1,0 +1,33 @@
+# Binaires
+bin/
+build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Dépendances
+vendor/
+*.mod
+*.sum
+
+# Fichiers de configuration d'IDE
+.idea/
+*.iml
+*.swp
+*.swo
+
+# Fichiers temporaires
+*.tmp
+*.bak
+
+# Logs
+*.log
+
+# Fichiers générés par Go
+*.test
+*.out
+
+# Répertoires spécifiques à certains environnements
+.env

@@ -1,0 +1,82 @@
+/* Arrière-plan avec un dégradé de bleus */
+body {
+  background: linear-gradient(45deg, #0033A0, #0066CC, #00AEEF, #66B2FF); /* Dégradé bleu vif */
+  background-size: 200% 200%; /* Ajuster la taille du dégradé pour plus de profondeur */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Optionnel : pour éviter le défilement */
+}
+
+/* Conteneur principal */
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* Titre principal */
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label */
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Champ de saisie et bouton */
+input[type="number"],
+button {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Champ de saisie */
+input[type="number"] {
+  border-color: #ccc;
+}
+
+/* Bouton */
+button {
+  background-color: #0072ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet de survol du bouton */
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Message d'erreur */
+.error {
+  color: #e74c3c;
+  margin-top: 1rem;
+  text-align: center;
+}

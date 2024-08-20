@@ -8,11 +8,37 @@
     <script src="/js/scripts.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="#generate-accounts">Générer Comptes</a></li>
+            <li><a href="#generate-contacts">Générer Contacts</a></li>
+            <li><a href="#generate-leads">Générer Leads</a></li>
+            <li><a href="#generate-products">Générer Produits</a></li>
+        </ul>
+    </nav>
+    
+    <div class="description">
         <h1>Salesforce Data Generator</h1>
-        
+        <p><strong>Salesforce Data Generator</strong> est un outil en ligne pratique pour créer rapidement des données fictives pour Salesforce. Il permet aux développeurs et testeurs de générer des <strong>Comptes</strong>, <strong>Contacts</strong>, <strong>Leads</strong>, et <strong>Produits</strong> en quelques clics, facilitant ainsi le développement, les tests et les démonstrations.</p>
+        <p><strong>Fonctionnalités Clés :</strong></p>
+        <ul>
+            <li><strong>Comptes</strong> : Génération rapide de comptes fictifs.</li>
+            <li><strong>Contacts</strong> : Création de contacts avec des informations aléatoires.</li>
+            <li><strong>Leads</strong> : Simulation de prospects pour tester les flux de vente.</li>
+            <li><strong>Produits</strong> : Création de produits fictifs pour enrichir vos données.</li>
+        </ul>
+        <p><strong>Comment Ça Marche :</strong></p>
+        <ol>
+            <li>Sélectionnez le type de données à générer.</li>
+            <li>Indiquez le nombre d'éléments souhaités.</li>
+            <li>Cliquez sur le bouton pour générer les données automatiquement.</li>
+        </ol>
+        <p>Le site utilise un design moderne et une interface intuitive pour une utilisation facile et rapide. <strong>Salesforce Data Generator</strong> évoluera régulièrement pour ajouter de nouvelles fonctionnalités et améliorer l'expérience utilisateur.</p>
+    </div>
+
+    <div class="container">
         <!-- Formulaire pour générer des comptes -->
-        <form class="generate-form" action="/generate-account" method="POST">
+        <form class="generate-form" id="generate-accounts" action="/generate-account" method="POST">
             <h2>Générer des Comptes</h2>
             <label for="count-accounts">Nombre de comptes :</label>
             <input type="number" id="count-accounts" name="count" min="1" required>
@@ -20,7 +46,7 @@
         </form>
 
         <!-- Formulaire pour générer des contacts -->
-        <form class="generate-form" action="/generate-contact" method="POST">
+        <form class="generate-form" id="generate-contacts" action="/generate-contact" method="POST">
             <h2>Générer des Contacts</h2>
             <label for="count-contacts">Nombre de contacts :</label>
             <input type="number" id="count-contacts" name="count" min="1" required>
@@ -28,11 +54,19 @@
         </form>
 
         <!-- Formulaire pour générer des leads -->
-        <form class="generate-form" action="/generate-lead" method="POST">
+        <form class="generate-form" id="generate-leads" action="/generate-lead" method="POST">
             <h2>Générer des Leads</h2>
             <label for="count-leads">Nombre de leads :</label>
             <input type="number" id="count-leads" name="count" min="1" required>
             <button type="submit">Générer Leads</button>
+        </form>
+
+        <!-- Formulaire pour générer des produits -->
+        <form class="generate-form" id="generate-products" action="/generate-product" method="POST">
+            <h2>Générer des Produits</h2>
+            <label for="count-product">Nombre de produits :</label>
+            <input type="number" id="count-product" name="count" min="1" required>
+            <button type="submit">Générer Produit</button>
         </form>
     </div>
 </body>

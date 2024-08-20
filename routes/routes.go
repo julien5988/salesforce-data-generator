@@ -17,4 +17,5 @@ func SetupRoutes(r *gin.Engine) {
 	r.POST("/generate-account", handleGenerateAccounts)
 	r.POST("/generate-contact", handleGenerateContacts)
 	r.POST("/generate-lead", handleGenerateLeads)
+	r.POST("/generate-product", handleGenerateProduct)
 }

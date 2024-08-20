@@ -29,6 +29,8 @@ func WriteCSV(filepath string, data interface{}) error {
 		headers = []string{"FirstName", "LastName", "Phone", "Email", "Address", "City", "State", "PostalCode"}
 	case []generator.Lead:
 		headers = []string{"FirstName", "LastName", "Phone", "Email", "Source"}
+	case []generator.Product:
+		headers = []string{"ProductName", "Category", "Description"}
 	default:
 		return fmt.Errorf("unsupported data type")
 	}
@@ -80,6 +82,14 @@ func WriteCSV(filepath string, data interface{}) error {
 				lead.Source,
 			})
 
+		}
+	case []generator.Product:
+		for _, product := range v {
+			records = append(records, []string{
+				product.Name,
+				product.Category,
+				product.Description,
+			})
 		}
 
 	default:

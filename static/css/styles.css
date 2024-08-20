@@ -6,25 +6,62 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden; /* Optionnel : pour éviter le défilement */
+  flex-direction: column; /* Permet de disposer la navbar et le contenu verticalement */
+  height: 100vh; /* Hauteur totale de la vue */
 }
 
-/* Conteneur principal */
-.container {
+/* Styles pour la barre de navigation */
+.navbar {
+  background-color: #0072ff; /* Couleur de fond de la navbar */
+  padding: 1rem;
+  border-radius: 0 0 12px 12px; /* Coins arrondis en bas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1200px; /* Largeur maximale pour aligner avec le contenu */
+  margin: 0 auto; /* Centre la navbar horizontalement */
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Aligner les éléments horizontalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 2rem; /* Espacement entre les éléments */
+}
+
+.navbar-menu li {
+  margin: 0;
+}
+
+.navbar-menu a {
+  color: #fff; /* Couleur du texte */
+  text-decoration: none; /* Enlever la sous-ligne */
+  font-size: 1.1rem; /* Taille du texte */
+  transition: color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.navbar-menu a:hover {
+  color: #d0e7ff; /* Couleur du texte au survol */
+}
+
+/* Section de description */
+.description {
   background-color: #ffffff;
-  border-radius: 12px; /* Bords arrondis plus marqués */
+  border-radius: 12px; /* Bords arrondis */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   width: 100%;
-  max-width: 1200px; /* Largeur maximale pour aligner les formulaires */
-  box-sizing: border-box;
-  display: flex; /* Utiliser flexbox pour aligner les formulaires */
-  flex-wrap: wrap; /* Permet aux formulaires de passer à la ligne si nécessaire */
-  justify-content: center; /* Centre les formulaires horizontalement */
-  gap: 1.5rem; /* Espacement entre les formulaires */
+  max-width: 1200px; /* Largeur maximale pour aligner avec le contenu */
+  margin: 1rem auto 2rem auto; /* Espacement entre la description et les autres éléments */
+  text-align: center; /* Centre le texte */
+}
+
+/* Style des listes sans numérotation ni points */
+ul, ol {
+  list-style: none; /* Enlève la numérotation et les puces */
+  padding: 0;
+  margin: 0;
 }
 
 /* Style des formulaires */
@@ -39,6 +76,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem; /* Espacement entre les éléments du formulaire */
+  transition: transform 0.2s ease; /* Ajout d'une transition pour les effets de mise en surbrillance */
+}
+
+/* Effet de survol du formulaire */
+form:hover {
+  transform: scale(1.02); /* Agrandissement léger lors du survol */
 }
 
 /* Titre principal */

@@ -34,7 +34,7 @@ func handleGenerateLeads(c *gin.Context) {
 	}
 
 	// Serve the CSV file as a downloadable attachment
-	c.Header("Content-Disposition", "attachment; filename=accounts.csv")
+	c.Header("Content-Disposition", "attachment; filename=lead.csv")
 	c.Header("Content-Type", "text/csv")
 	c.File(filePath)
 }

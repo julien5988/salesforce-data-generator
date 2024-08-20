@@ -9,7 +9,7 @@ import (
 
 // Account représente l'objet Account dans Salesforce
 type Account struct {
-	Name        string `faker:"-"` // Nous ne générons plus le nom ici
+	Name        string `faker:"-"`
 	Phone       string `faker:"phone_number"`
 	Website     string `faker:"url"`
 	Industry    string `faker:"oneof: Technology,Finance,Healthcare,Manufacturing,Education"`

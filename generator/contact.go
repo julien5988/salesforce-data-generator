@@ -8,7 +8,6 @@ import (
 	"github.com/go-faker/faker/v4"
 )
 
-// Contact représente un contact fictif
 type Contact struct {
 	FirstName   string `faker:"first_name"`
 	LastName    string `faker:"last_name"`
@@ -28,7 +27,7 @@ func GenerateContact(count int) ([]Contact, error) {
 	for i := 0; i < count; i++ {
 		var contact Contact
 		if err := faker.FakeData(&contact); err != nil {
-			return nil, err // Retourner l'erreur si la génération échoue
+			return nil, err
 		}
 
 		// Construire l'adresse e-mail personnalisée

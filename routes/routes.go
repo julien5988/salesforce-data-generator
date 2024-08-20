@@ -16,4 +16,5 @@ func SetupRoutes(r *gin.Engine) {
 	// Handle the form submission and generate the CSV file
 	r.POST("/generate-account", handleGenerateAccounts)
 	r.POST("/generate-contact", handleGenerateContacts)
+	r.POST("/generate-lead", handleGenerateLeads)
 }

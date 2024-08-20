@@ -15,7 +15,6 @@ type Lead struct {
 	Phone     string `faker:"phone_number"`
 	Email     string
 	Source    string
-	CreatedAt time.Time `faker:"-"`
 }
 
 // Liste des sources possibles pour un lead
@@ -49,7 +48,6 @@ func GenerateLeads(count int) ([]Lead, error) {
 		// Assigner une source aléatoire
 		lead.Source = sources[rand.Intn(len(sources))]
 		// Assigner la date actuelle pour CreatedAt
-		lead.CreatedAt = time.Now()
 
 		leads = append(leads, lead) // Ajouter le lead à la liste
 	}

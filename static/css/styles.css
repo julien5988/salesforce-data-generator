@@ -7,7 +7,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column; /* Permet de disposer la navbar et le contenu verticalement */
-  height: 100vh; /* Hauteur totale de la vue */
+  min-height: 100vh; /* Hauteur totale de la vue */
 }
 
 /* Styles pour la barre de navigation */
@@ -16,20 +16,27 @@ body {
   padding: 1rem;
   border-radius: 0 0 12px 12px; /* Coins arrondis en bas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 1200px; /* Largeur maximale pour aligner avec le contenu */
-  margin: 0 auto; /* Centre la navbar horizontalement */
+  width: 80%;
+  /*max-width: 1200px; /* Largeur maximale pour aligner avec le contenu */
+  margin: 0 9% ; /* Centre la navbar horizontalement */
+  position: fixed; /* Fixer la barre en haut */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Assure que la barre de navigation est au-dessus du reste du contenu */
+  display: flex; /* Utiliser Flexbox pour centrer le contenu */
+  justify-content: center; /* Centre les éléments horizontalement */
 }
 
+/* Menu de la navbar */
 .navbar-menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex; /* Aligner les éléments horizontalement */
-  justify-content: center; /* Centre les éléments horizontalement */
   gap: 2rem; /* Espacement entre les éléments */
 }
 
+/* Styles pour les éléments de la navbar */
 .navbar-menu li {
   margin: 0;
 }
@@ -53,7 +60,7 @@ body {
   padding: 2rem;
   width: 100%;
   max-width: 1200px; /* Largeur maximale pour aligner avec le contenu */
-  margin: 1rem auto 2rem auto; /* Espacement entre la description et les autres éléments */
+  margin: 6rem auto 3rem auto; /* Marge en haut pour compenser la hauteur de la barre de navigation */
   text-align: center; /* Centre le texte */
 }
 
@@ -82,6 +89,15 @@ form {
 /* Effet de survol du formulaire */
 form:hover {
   transform: scale(1.02); /* Agrandissement léger lors du survol */
+}
+
+/* Conteneur des formulaires */
+.form-container {
+  display: flex; /* Utiliser flexbox pour aligner les formulaires horizontalement */
+  flex-wrap: wrap; /* Permet aux formulaires de passer à la ligne si nécessaire */
+  justify-content: center; /* Centre les formulaires horizontalement */
+  gap: 2rem; /* Espacement entre les formulaires */
+  margin-bottom: 4rem; /* Ajoute de l'espace en bas avant le footer */
 }
 
 /* Titre principal */
@@ -136,4 +152,32 @@ button:hover {
   color: #e74c3c;
   margin-top: 1rem;
   text-align: center;
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: #0033A0; /* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte */
+  padding: 1rem;
+  text-align: center; /* Centre le texte */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.footer-content a {
+  color: #66B2FF; /* Couleur des liens */
+  text-decoration: none; /* Enlever la sous-ligne */
+  margin: 0 0.5rem; /* Espacement entre les liens */
+  font-size: 0.9rem; /* Taille du texte */
+  transition: color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.footer-content a:hover {
+  color: #d0e7ff; /* Couleur des liens au survol */
 }

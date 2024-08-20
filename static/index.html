@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +10,9 @@
 <body>
     <div class="container">
         <h1>Salesforce Data Generator</h1>
+        
         <!-- Formulaire pour générer des comptes -->
-        <form id="generate-accounts-form" action="/generate-account" method="POST">
+        <form class="generate-form" action="/generate-account" method="POST">
             <h2>Générer des Comptes</h2>
             <label for="count-accounts">Nombre de comptes :</label>
             <input type="number" id="count-accounts" name="count" min="1" required>
@@ -20,20 +20,20 @@
         </form>
 
         <!-- Formulaire pour générer des contacts -->
-        <form id="generate-contacts-form" action="/generate-contact" method="POST">
+        <form class="generate-form" action="/generate-contact" method="POST">
             <h2>Générer des Contacts</h2>
             <label for="count-contacts">Nombre de contacts :</label>
             <input type="number" id="count-contacts" name="count" min="1" required>
             <button type="submit">Générer Contacts</button>
         </form>
 
-        <form id="generate-contacts-form" action="/generate-lead" method="POST">
-            <h2>Générer des Contacts</h2>
-            <label for="count-leads">Nombre de Leads :</label>
+        <!-- Formulaire pour générer des leads -->
+        <form class="generate-form" action="/generate-lead" method="POST">
+            <h2>Générer des Leads</h2>
+            <label for="count-leads">Nombre de leads :</label>
             <input type="number" id="count-leads" name="count" min="1" required>
             <button type="submit">Générer Leads</button>
         </form>
     </div>
 </body>
 </html>
-

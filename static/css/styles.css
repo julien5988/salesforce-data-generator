@@ -15,33 +15,46 @@ body {
 /* Conteneur principal */
 .container {
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px; /* Bords arrondis plus marqués */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 1200px; /* Largeur maximale pour aligner les formulaires */
   box-sizing: border-box;
+  display: flex; /* Utiliser flexbox pour aligner les formulaires */
+  flex-wrap: wrap; /* Permet aux formulaires de passer à la ligne si nécessaire */
+  justify-content: center; /* Centre les formulaires horizontalement */
+  gap: 1.5rem; /* Espacement entre les formulaires */
+}
+
+/* Style des formulaires */
+form {
+  background-color: #f9f9f9;
+  border-radius: 8px; /* Bords arrondis des formulaires */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  width: 100%; /* Largeur 100% du conteneur */
+  max-width: 300px; /* Largeur maximale des formulaires */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacement entre les éléments du formulaire */
 }
 
 /* Titre principal */
 h1 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Taille de police agrandie */
   color: #333;
   text-align: center;
-}
-
-/* Formulaire */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  width: 100%; /* Prendre toute la largeur disponible */
 }
 
 /* Label */
 label {
-  font-weight: bold;
+  font-weight: 600; /* Poids de police augmenté */
   color: #555;
+  margin-bottom: 0.5rem; /* Espacement sous le label */
 }
 
 /* Champ de saisie et bouton */
@@ -49,7 +62,7 @@ input[type="number"],
 button {
   padding: 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px; /* Bords arrondis plus marqués */
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
@@ -66,12 +79,13 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Ajout d'une transition pour l'effet de survol */
 }
 
 /* Effet de survol du bouton */
 button:hover {
   background-color: #005bb5;
+  transform: scale(1.05); /* Agrandissement léger lors du survol */
 }
 
 /* Message d'erreur */
